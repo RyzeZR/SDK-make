@@ -51,7 +51,7 @@ jobs:
           cd $SDK_NAME
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-          make defconfig
+          make menuconfig
 
       - name: 开始编译
         run: |
