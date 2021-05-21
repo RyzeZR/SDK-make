@@ -38,6 +38,7 @@ jobs:
       - name: update & install feeds
         run: |
           cd $SDK_NAME
+          make clean
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
@@ -49,7 +50,6 @@ jobs:
       - name: update & install feeds again & make defconfig
         run: |
           cd $SDK_NAME
-          make clean
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           make menuconfig
